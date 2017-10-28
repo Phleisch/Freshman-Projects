@@ -12,7 +12,7 @@ public class RubiksCube extends Applet implements MouseListener, KeyListener {
 
     private static final int APP_W = 900;
     private static final int APP_H = 900;
-    static final Point ORIGIN = new Point(APP_W/2,APP_H/2,0);
+    static final Point ORIGIN = new Point(APP_W / 2, APP_H / 2, 0);
 
     private final int SIDE_LENGTH = (int) ((APP_W - 15) / (3.0 * Math.sqrt(3)));
     private final int CORNER_HYP = (int) ((3 * SIDE_LENGTH) / Math.sqrt(2));
@@ -41,7 +41,7 @@ public class RubiksCube extends Applet implements MouseListener, KeyListener {
             corners[point] = new Point(ORIGIN,
                     (Math.PI / 4.0) + (Math.PI * (point)) / 2.0, CORNER_HYP);
             edges1[point] = new Point(ORIGIN,
-                    Math.atan(1.0/3.0) + (Math.PI * (point)) / 2.0, EDGE_HYP);
+                    Math.atan(1.0 / 3.0) + (Math.PI * (point)) / 2.0, EDGE_HYP);
             edges2[point] = new Point(ORIGIN,
                     Math.atan(3.0) + (Math.PI * (point)) / 2.0, EDGE_HYP);
             iCorners[point] = new Point(ORIGIN,
@@ -108,7 +108,7 @@ public class RubiksCube extends Applet implements MouseListener, KeyListener {
 
         int index = 0;
 
-        for(Sticker s : stickers) {
+        for (Sticker s : stickers) {
             pieces[index++] = new CenterPiece(s);
         }
 
@@ -122,8 +122,8 @@ public class RubiksCube extends Applet implements MouseListener, KeyListener {
 
     public void update(Graphics g) {
         //int random = (int) (Math.random() * 256);
-        backG.setColor(new Color(140,140,140));
-        backG.fillRect(0,0, APP_W, APP_H);
+        backG.setColor(new Color(140, 140, 140));
+        backG.fillRect(0, 0, APP_W, APP_H);
         primary.draw(backG);
 
         for (Point[] points : pointArrays)
@@ -156,7 +156,8 @@ public class RubiksCube extends Applet implements MouseListener, KeyListener {
      * @param e Object detailing the event
      */
     @Override
-    public void keyTyped(KeyEvent e) { }
+    public void keyTyped(KeyEvent e) {
+    }
 
     /**
      * Invoked when a key has been pressed.
@@ -166,7 +167,8 @@ public class RubiksCube extends Applet implements MouseListener, KeyListener {
      * @param e Object detailing the event
      */
     @Override
-    public void keyPressed(KeyEvent e) { }
+    public void keyPressed(KeyEvent e) {
+    }
 
     /**
      * Invoked when a key has been released.
@@ -176,7 +178,8 @@ public class RubiksCube extends Applet implements MouseListener, KeyListener {
      * @param e Object detailing the event
      */
     @Override
-    public void keyReleased(KeyEvent e) { }
+    public void keyReleased(KeyEvent e) {
+    }
 
     /**
      * Invoked when the mouse button has been clicked (pressed
@@ -215,7 +218,8 @@ public class RubiksCube extends Applet implements MouseListener, KeyListener {
      * @param e Object detailing the event
      */
     @Override
-    public void mouseEntered(MouseEvent e) { }
+    public void mouseEntered(MouseEvent e) {
+    }
 
     /**
      * Invoked when the mouse exits a component.
@@ -223,5 +227,6 @@ public class RubiksCube extends Applet implements MouseListener, KeyListener {
      * @param e Object detailing the event
      */
     @Override
-    public void mouseExited(MouseEvent e) { }
+    public void mouseExited(MouseEvent e) {
+    }
 }

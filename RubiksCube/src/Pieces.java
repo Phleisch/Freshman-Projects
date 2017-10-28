@@ -20,7 +20,7 @@ class CenterPiece {
      *
      * @param local Sticker to initialize local.
      * @throws IllegalArgumentException if any
-     * Sticker parameter is null.
+     *                                  Sticker parameter is null.
      */
     public CenterPiece(Sticker local) {
         Project.checkNull(local, "local");
@@ -41,7 +41,9 @@ class CenterPiece {
      *
      * @return the local Sticker of this piece.
      */
-    public Sticker getLocal() { return local; }
+    public Sticker getLocal() {
+        return local;
+    }
 }
 
 
@@ -69,7 +71,7 @@ class EdgePiece extends CenterPiece {
      * @param local Sticker to initialize local.
      * @param below Sticker to initialize below.
      * @throws IllegalArgumentException if any
-     * Sticker parameter is null.
+     *                                  Sticker parameter is null.
      */
     public EdgePiece(Sticker local, Sticker below) {
         super(local);
@@ -84,7 +86,9 @@ class EdgePiece extends CenterPiece {
      * @return the Sticker below the local Sticker
      * of this piece.
      */
-    public Sticker getBelow() { return below; }
+    public Sticker getBelow() {
+        return below;
+    }
 }
 
 
@@ -111,9 +115,9 @@ class CornerPiece extends EdgePiece {
      *
      * @param local Sticker to initialize local.
      * @param below Sticker to initialize below.
-     * @param left Sticker to initialize left.
+     * @param left  Sticker to initialize left.
      * @throws IllegalArgumentException if any
-     * Sticker parameter is null.
+     *                                  Sticker parameter is null.
      */
     public CornerPiece(Sticker local, Sticker below, Sticker left) {
         super(local, below);
@@ -128,5 +132,7 @@ class CornerPiece extends EdgePiece {
      * @return the Sticker to the left of the
      * local Sticker of this piece.
      */
-    public Sticker getLeft() { return left; }
+    public Sticker getLeft() {
+        return left;
+    }
 }

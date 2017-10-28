@@ -24,7 +24,7 @@ public class Sticker {
      * Constructs a Sticker with corners and color
      * set to parameter specifications.
      *
-     * @param corners Array of points to initialize the corners of this sticker.
+     * @param corners      Array of points to initialize the corners of this sticker.
      * @param stickerColor Color to initialize sticker color.
      * @throws IllegalArgumentException if any Point or String parameter is null.
      */
@@ -43,35 +43,45 @@ public class Sticker {
      *
      * @return the lower left point of this Sticker.
      */
-    public Point getLowerLeft() { return corners[2]; }
+    public Point getLowerLeft() {
+        return corners[2];
+    }
 
     /**
      * Returns the upper left point of this Sticker.
      *
      * @return the upper left point of this Sticker.
      */
-    public Point getUpperLeft() { return corners[3]; }
+    public Point getUpperLeft() {
+        return corners[3];
+    }
 
     /**
      * Returns the upper right point of this Sticker.
      *
      * @return the upper right point of this Sticker.
      */
-    public Point getUpperRight() { return corners[0]; }
+    public Point getUpperRight() {
+        return corners[0];
+    }
 
     /**
      * Returns the lower right point of this Sticker.
      *
      * @return the lower right point of this Sticker.
      */
-    public Point getLowerRight() { return corners[1]; }
+    public Point getLowerRight() {
+        return corners[1];
+    }
 
     /**
      * Returns all points of this sticker.
      *
      * @return all points of this sticker.
      */
-    public Point[] getCorners() { return corners; }
+    public Point[] getCorners() {
+        return corners;
+    }
 
     /**
      * Sets the value of the lower left point to the
@@ -79,7 +89,9 @@ public class Sticker {
      *
      * @param lowerLeft value to set lower left point to.
      */
-    public void setLowerLeft(Point lowerLeft) { corners[2] = lowerLeft; }
+    public void setLowerLeft(Point lowerLeft) {
+        corners[2] = lowerLeft;
+    }
 
     /**
      * Sets the value of the upper left point to the
@@ -87,7 +99,9 @@ public class Sticker {
      *
      * @param upperLeft value to set upper left point to.
      */
-    public void setUpperLeft(Point upperLeft) { corners[3] = upperLeft; }
+    public void setUpperLeft(Point upperLeft) {
+        corners[3] = upperLeft;
+    }
 
     /**
      * Sets the value of the upper right point to the
@@ -95,7 +109,9 @@ public class Sticker {
      *
      * @param upperRight value to set upper right point to.
      */
-    public void setUpperRight(Point upperRight) { corners[0] = upperRight; }
+    public void setUpperRight(Point upperRight) {
+        corners[0] = upperRight;
+    }
 
     /**
      * Sets the value of the lower right point to the
@@ -103,14 +119,18 @@ public class Sticker {
      *
      * @param lowerRight value to set lower right point to.
      */
-    public void setLowerRight(Point lowerRight) { corners[1] = lowerRight; }
+    public void setLowerRight(Point lowerRight) {
+        corners[1] = lowerRight;
+    }
 
     /**
      * Returns the color of this Sticker.
      *
      * @return the color of this Sticker.
      */
-    public String getStickerColor() { return stickerColor; }
+    public String getStickerColor() {
+        return stickerColor;
+    }
 
     /**
      * Displays a graphical representation of this object.

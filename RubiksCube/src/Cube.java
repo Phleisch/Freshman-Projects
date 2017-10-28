@@ -11,37 +11,37 @@ public class Cube {
     /**
      * The official color Black for all Cube objects.
      */
-    public static final Color BLACK = new Color(0,0,0);
+    public static final Color BLACK = new Color(0, 0, 0);
 
     /**
      * The official color Blue for all Cube objects.
      */
-    public static final Color BLUE = new Color(0,0,255);
+    public static final Color BLUE = new Color(0, 0, 255);
 
     /**
      * The official color Green for all Cube objects.
      */
-    public static final Color GREEN = new Color(0,128,0);
+    public static final Color GREEN = new Color(0, 128, 0);
 
     /**
      * The official color Orange for all Cube objects.
      */
-    public static final Color ORANGE = new Color(255,165,0);
+    public static final Color ORANGE = new Color(255, 165, 0);
 
     /**
      * The official color Red for all Cube objects.
      */
-    public static final Color RED = new Color(255,0,0);
+    public static final Color RED = new Color(255, 0, 0);
 
     /**
      * The official color White for all Cube objects.
      */
-    public static final Color WHITE = new Color(255,255,255);
+    public static final Color WHITE = new Color(255, 255, 255);
 
     /**
      * The official color Yellow for all Cube objects.
      */
-    public static final Color YELLOW = new Color(255,255,0);
+    public static final Color YELLOW = new Color(255, 255, 0);
 
     /**
      * Array of faces that make up this Cube.
@@ -65,7 +65,7 @@ public class Cube {
      *
      * @param faces Face array to initialize face array.
      * @throws IllegalArgumentException if any faces is null of
-     * if an element of faces is null.
+     *                                  if an element of faces is null.
      */
     public Cube(Face[] faces) {
         Project.checkNull(faces, "faces");
@@ -79,25 +79,34 @@ public class Cube {
      *
      * @return the array of faces for this Cube.
      */
-    public Face[] getFaces() { return faces; }
+    public Face[] getFaces() {
+        return faces;
+    }
 
     /**
      * Returns the color equivalent to the passed String.
      *
-     * @return the the color equivalent to the passed String.
      * @param color The color being asked for.
+     * @return the the color equivalent to the passed String.
      */
     public static Color getColor(String color) {
         Project.checkNull(color, "color");
 
-        switch(color) {
-            case "BLACK":   return BLACK;
-            case "BLUE":    return BLUE;
-            case "GREEN":   return GREEN;
-            case "ORANGE":  return ORANGE;
-            case "RED":     return RED;
-            case "WHITE":   return WHITE;
-            case "YELLOW":  return YELLOW;
+        switch (color) {
+            case "BLACK":
+                return BLACK;
+            case "BLUE":
+                return BLUE;
+            case "GREEN":
+                return GREEN;
+            case "ORANGE":
+                return ORANGE;
+            case "RED":
+                return RED;
+            case "WHITE":
+                return WHITE;
+            case "YELLOW":
+                return YELLOW;
         }
 
         return BLACK;

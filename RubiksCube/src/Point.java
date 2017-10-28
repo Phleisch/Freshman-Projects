@@ -49,11 +49,11 @@ public class Point {
      * Constructs a MOVING Point with X, Y, and Z
      * coordinates set to parameter specifications.
      *
-     * @param x value to initialize X coordinate.
-     * @param y value to initialize Y coordinate.
-     * @param z value to initialize Z coordinate.
+     * @param x     value to initialize X coordinate.
+     * @param y     value to initialize Y coordinate.
+     * @param z     value to initialize Z coordinate.
      * @param angle value to initialize angle.
-     * @param oD value to initialize originDistance.
+     * @param oD    value to initialize originDistance.
      */
     public Point(double x, double y, double z, double angle, double oD) {
         this(x, y, z);
@@ -68,14 +68,14 @@ public class Point {
      * of X, Y, Z coordinates.
      *
      * @param origin origin of the plane this point
-     * lies on.
-     * @param angle value to initialize angle.
-     * @param oD value to initialize originDistance.
+     *               lies on.
+     * @param angle  value to initialize angle.
+     * @param oD     value to initialize originDistance.
      */
     public Point(Point origin, double angle, double oD) {
         //Set Z = 0 for now because I have no idea what to do
         this(oD * Math.cos(angle) + origin.x,
-                origin.y - oD * Math.sin(angle),0);
+                origin.y - oD * Math.sin(angle), 0);
         this.angle = angle;
         originDistance = oD;
     }
@@ -85,7 +85,9 @@ public class Point {
      *
      * @return the X coordinate of this Point.
      */
-    public double getX() { return x; }
+    public double getX() {
+        return x;
+    }
 
     /**
      * Sets the value of the X coordinate of this Point
@@ -93,14 +95,18 @@ public class Point {
      *
      * @param x value to set X coordinate to.
      */
-    public void setX(double x) { this.x = x; }
+    public void setX(double x) {
+        this.x = x;
+    }
 
     /**
      * Returns the Y coordinate of this Point.
      *
      * @return the Y coordinate of this Point.
      */
-    public double getY() { return y; }
+    public double getY() {
+        return y;
+    }
 
     /**
      * Sets the value of the Y coordinate of this Point
@@ -108,14 +114,18 @@ public class Point {
      *
      * @param y value to set Y coordinate to.
      */
-    public void setY(double y) { this.y = y; }
+    public void setY(double y) {
+        this.y = y;
+    }
 
     /**
      * Returns the Z coordinate of this Point.
      *
      * @return the Z coordinate of this Point.
      */
-    public double getZ() { return z; }
+    public double getZ() {
+        return z;
+    }
 
     /**
      * Sets the value of the Z coordinate of this Point
@@ -123,14 +133,18 @@ public class Point {
      *
      * @param z value to set Z coordinate to.
      */
-    public void setZ(double z) { this.z = z; }
+    public void setZ(double z) {
+        this.z = z;
+    }
 
     /**
      * Returns the angle of this Point.
      *
      * @return the angle of this Point.
      */
-    public double getAngle() { return angle; }
+    public double getAngle() {
+        return angle;
+    }
 
     /**
      * Sets the angle of this Point
@@ -159,9 +173,14 @@ public class Point {
 
         for (Point p : points) {
             switch (c) {
-                case 'x': all[index++] = p.x; break;
-                case 'y': all[index++] = p.y; break;
-                case 'z': all[index++] = p.z;
+                case 'x':
+                    all[index++] = p.x;
+                    break;
+                case 'y':
+                    all[index++] = p.y;
+                    break;
+                case 'z':
+                    all[index++] = p.z;
             }
         }
 
@@ -179,7 +198,7 @@ public class Point {
         int[] roundAll = new int[points.length];
         int index = 0;
 
-        for(double d : getAll(points, c))
+        for (double d : getAll(points, c))
             roundAll[index++] = (int) d;
 
         return roundAll;
@@ -190,5 +209,7 @@ public class Point {
      *
      * @return this Point's distance from origin.
      */
-    public double getOriginDistance() { return originDistance; }
+    public double getOriginDistance() {
+        return originDistance;
+    }
 }

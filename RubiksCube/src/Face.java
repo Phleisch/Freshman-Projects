@@ -24,10 +24,10 @@ public class Face {
      * Constructs a Face with pieces and color
      * set to parameter specification.
      *
-     * @param pieces Matrix to initialize pieces.
+     * @param pieces    Matrix to initialize pieces.
      * @param faceColor Color to initialize face color.
      * @throws IllegalArgumentException if any parameter
-     * is null.
+     *                                  is null.
      */
     public Face(CenterPiece[][] pieces, String faceColor) {
         Project.checkNull(pieces, "pieces");
@@ -42,8 +42,8 @@ public class Face {
         this.pieces = new CenterPiece[3][3];
         int index = 0;
 
-        for(CenterPiece p : pieces)
-            this.pieces[index/3][index++%3] = p;
+        for (CenterPiece p : pieces)
+            this.pieces[index / 3][index++ % 3] = p;
         this.faceColor = faceColor;
     }
 
@@ -53,8 +53,8 @@ public class Face {
      * @param g The graphics environment being used.
      */
     public void draw(Graphics g) {
-        for(CenterPiece[] pArray : pieces)
-            for(CenterPiece p : pArray)
+        for (CenterPiece[] pArray : pieces)
+            for (CenterPiece p : pArray)
                 p.draw(g);
     }
 
@@ -63,12 +63,16 @@ public class Face {
      *
      * @return the matrix of pieces for this Face.
      */
-    public CenterPiece[][] getPieces() { return pieces; }
+    public CenterPiece[][] getPieces() {
+        return pieces;
+    }
 
     /**
      * Returns the color name of this Face.
      *
      * @return the color name of this Face.
      */
-    public String getFaceColor() { return faceColor; }
+    public String getFaceColor() {
+        return faceColor;
+    }
 }
